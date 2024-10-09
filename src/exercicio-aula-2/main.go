@@ -26,12 +26,12 @@ func main() {
 	fmt.Printf("Digite uma string: ")
 	fmt.Scanln(&var4)
 	concatIntString(var3, var4)] */
-	
+
 	/* // Exercício 3 - Divisão de Float e Int
 
 	var var5 float64
 	var var6 int
-	
+
 	fmt.Printf("Digite um número com casas decimais: ")
 	fmt.Scanln(&var5)
 	fmt.Printf("Digite um inteiro: ")
@@ -98,37 +98,37 @@ func main() {
 func somaIntEfloat(x int, y float64) {
 	var a int = x
 	var b float64 = y
-	
+
 	var c float64 = float64(a) + b
-	
+
 	fmt.Println("1. Conversao int-float: ", c)
 }
 
 func concatIntString(x int, y string) {
 	var n int = x
 	var text string = y
-	
+
 	convertString := strconv.Itoa(n)
 	result := convertString + text
-	
+
 	fmt.Println("2. String convertida: ", result)
 }
 
 func divisaoFloatInt(x float64, y int) {
 	z := x / float64(y)
-	
+
 	fmt.Println("3. Divisão de Float e Int: ", z)
 }
 
 func CompararStrings(str1 string, str2 string) {
 	var isEqual bool = str1 == str2
-	
+
 	fmt.Println("4. Resultado da comparacao: ", isEqual)
 }
 
 func SomarUintEInt(m uint, n int) {
 	var sum uint = m + uint(n)
-	
+
 	fmt.Println("5. Resultado da soma: ", sum)
 }
 
@@ -136,29 +136,29 @@ func ConvertBoolToInt(flag bool) {
 	var intFlag int
 	if flag {
 		intFlag = 1
-		} else {
-			intFlag = 0
-		}
-		
-		fmt.Println("4. Resultado da conversao: ", intFlag)
+	} else {
+		intFlag = 0
 	}
-	
-	func MostrarBinarioDeInt(num int64) {
-		var binaryStr string = strconv.FormatInt(num, 2)
-		
-		fmt.Println("5. Representacao em binario: ", binaryStr)
-	}
-	
-	func CalcularAreaCirculo(radius float64) {
-		var area float64 = math.Pi * math.Pow(radius, 2)
-		
-		fmt.Printf("5. Área do círculo: %.2f", area)
-	}
-	
-	func ConcatStringFloat(message string) {
+
+	fmt.Println("4. Resultado da conversao: ", intFlag)
+}
+
+func MostrarBinarioDeInt(num int64) {
+	var binaryStr string = strconv.FormatInt(num, 2)
+
+	fmt.Println("5. Representacao em binario: ", binaryStr)
+}
+
+func CalcularAreaCirculo(radius float64) {
+	var area float64 = math.Pi * math.Pow(radius, 2)
+
+	fmt.Printf("5. Área do círculo: %.2f", area)
+}
+
+func ConcatStringFloat(message string) {
 	var pi float64 = 3.14159
 	var fullMessage string = strconv.FormatFloat(pi, 'f', -1, 64) + message
-	
+
 	fmt.Println("6. Mensagem concatenada:", fullMessage)
 }
 
