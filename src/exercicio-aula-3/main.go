@@ -6,11 +6,11 @@ import (
 )
 
 func main() {
-	/* // 1. Soma de Elementos em um Array:
+	// 1. Soma de Elementos em um Array:
 	array := []int{1, 2, 3, 4, 5}
 	result := SomarElementosArray(array)
 
-	fmt.Println(result) */
+	fmt.Println(result)
 
 	/* 	// 2. Inverter um Array:
 	   	array := []int{3, 5, 7, 9}
@@ -23,14 +23,14 @@ func main() {
 
 	CountCharOnString(word) */
 
-	// 4. Agrupar Palavras por Comprimento (Map):
-	// Exemplo de uso
+/* 	// 4. Agrupar Palavras por Comprimento (Map):
+	// Exemplo
 	palavras := []string{"Alagoas", "Maceió", "oxetech", "go", "golang", 
 		"python", "javascript", "php"}
 	resultado := AgruparPorComprimento(palavras)
 
 	// Exibe o map resultante
-	fmt.Println(resultado)
+	fmt.Println(resultado) */
 
 /* 	// 5. Números Pares em um Intervalo:
 	paresEmIntervalo() */
@@ -89,6 +89,20 @@ func CountCharOnString(word string) map[string]int {
 		fmt.Println("Palavra:", c, " | Num de caracteres: ", v)
 	}
 	return wordMap
+}
+
+// 4.
+func AgruparPorComprimento(palavras []string) map[int][]string {
+	grupos := make(map[int][]string)
+
+
+	for _, palavra := range palavras {
+		comprimento := len(palavra)
+		// Adiciona a palavra ao array do map correspondente ao comprimento
+		grupos[comprimento] = append(grupos[comprimento], palavra)
+	}
+
+	return grupos
 }
 
 // 5.
@@ -181,15 +195,3 @@ func Fatorial(num int) int {
 		return contador
 	}
 	
-	func AgruparPorComprimento(palavras []string) map[int][]string {
-		grupos := make(map[int][]string)
-
-
-		for _, palavra := range palavras {
-			comprimento := len(palavra)
-			// Adiciona a palavra ao array do map correspondente ao comprimento
-			grupos[comprimento] = append(grupos[comprimento], palavra)
-		}
-
-		return grupos
-	}
